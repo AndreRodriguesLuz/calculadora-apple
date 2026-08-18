@@ -1,3 +1,4 @@
+
 let expressao = "";
 
 function atualizarDisplay(valor) {
@@ -30,7 +31,11 @@ function apagarUm() {
 function calcular() {
     try {
         if (!expressao) return;
-        let resultado = eval(expressao);
+        
+        // Substitui % por /100 antes de avaliar o cálculo
+        let expressaoFormatada = expressao.replace(/%/g, '/100');
+        let resultado = eval(expressaoFormatada);
+        
         expressao = String(resultado);
         atualizarDisplay(expressao);
     } catch (error) {
