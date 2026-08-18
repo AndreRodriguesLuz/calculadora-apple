@@ -1,6 +1,6 @@
 # 📱 Calculadora Apple
 
- Recriação da calculadora clássica do iOS usando HTML, CSS e JavaScript puro. 
+Recriação da calculadora clássica do iOS usando HTML, CSS e JavaScript puro.
 
 O objetivo do projeto foi treinar a construção de interfaces fiéis ao design original da Apple e praticar a lógica de manipulação do DOM e expressões matemáticas no navegador.
 
@@ -8,7 +8,7 @@ O objetivo do projeto foi treinar a construção de interfaces fiéis ao design 
 
 ## 💻 Como ficou
 Você pode testar a calculadora rodando direto no seu navegador:
-👉 **[Acessar Calculadora Online](https://andrerodriguesluz.github.io/calculadora-apple/)**
+👉 [**Acessar Calculadora Online**](https://andrerodriguesluz.github.io/calculadora-apple/)
 
 ---
 
