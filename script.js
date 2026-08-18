@@ -30,7 +30,6 @@ function apagarUm() {
 function calcular() {
     try {
         if (!expressao) return;
-        // Substitui caracteres visuais caso necessário
         let resultado = eval(expressao);
         expressao = String(resultado);
         atualizarDisplay(expressao);
