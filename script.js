@@ -1,20 +1,41 @@
-// Função que adiciona os números e operadores no visor da calculadora
-function appendToDisplay(value) {
-    document.getElementById('display').value += value;
-}
+let expressao = "";
 
-// Função que limpa totalmente o visor da calculadora
-function clearDisplay() {
-    document.getElementById('display').value = '';
-}
-
-// Função que pega a expressão do visor e calcula o resultado matemático
-function calculate() {
+function atualizarDisplay(valor) {
     const display = document.getElementById('display');
+    display.innerText = valor || "0";
+}
+
+function inserir(caractere) {
+    if (expressao === "Erro") {
+        expressao = "";
+    }
+    expressao += caractere;
+    atualizarDisplay(expressao);
+}
+
+function limparTudo() {
+    expressao = "";
+    atualizarDisplay("0");
+}
+
+function apagarUm() {
+    if (expressao === "Erro") {
+        limparTudo();
+        return;
+    }
+    expressao = expressao.slice(0, -1);
+    atualizarDisplay(expressao);
+}
+
+function calcular() {
     try {
-        // O comando eval resolve a conta matemática que está em texto
-        display.value = eval(display.value);
+        if (!expressao) return;
+        // Substitui caracteres visuais caso necessário
+        let resultado = eval(expressao);
+        expressao = String(resultado);
+        atualizarDisplay(expressao);
     } catch (error) {
-        display.value = 'Erro';
+        atualizarDisplay("Erro");
+        expressao = "";
     }
 }
